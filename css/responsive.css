@@ -1,0 +1,184 @@
+/* small devices */
+@media only screen and (max-width: 767px) {
+
+    /* ######### NAVIGATION  ######### */
+    .navbar-default {
+        background-color: #fff !important;
+        border-color: #e6e6e6;
+    }
+
+    /* ######### ABOUT US  ######### */
+    .about-iphone img {
+        width: 50%;
+    }
+
+    .choose-us-des {
+        padding-bottom: 50px;
+    }
+
+    /* ######### FEATURES  ######### */
+    .feature-item {
+        text-align: center;
+    }
+
+    /* ######### PURCHASE NOW  ######### */
+    .purchase-now {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+}
+
+/* small devices and tablets */
+@media only screen and (max-width: 769px) {
+
+    /* ######### LOADING SPINNER ######### */
+    .spinner-wrapper {
+        background-color: rgb(255 255 255 / 100%);
+    }
+
+    /* ######### GENERIC CSS  ######### */
+    .section-title {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    /* ######### HEADER  ######### */
+    .header-iphone {
+        display: none;
+    }
+
+    .header-text,
+    .header-btns {
+        text-align: center;
+    }
+
+    /* ######### ABOUT US  ######### */
+    .about-iphone img {
+        width: 70%;
+    }
+
+    .choose-us-des {
+        padding-bottom: 60px;
+    }
+
+    /* ######### FEATURES  ######### */
+    .features-inner-wrapper {
+        padding-bottom: 15px;
+    }
+
+    .feature-iphone {
+        width: 65%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    /* ######### PURCHASE NOW  ######### */
+    .purchase-now {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .purchase-now .col-md-3 {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    /* ######### SCREENS  ######### */
+    .screen-slider {
+        padding-bottom: 40px;
+    }
+
+    /* ######### COUNTERS  ######### */
+    .counter-overlay {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .counter-item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .counter-item i {
+        font-size: 45px;
+    }
+
+    .counter-item h2 {
+        font-size: 25px;
+    }
+
+    .counter-item p {
+        font-size: 20px;
+    }
+
+    /* ######### AVAILALBLE ON  ######### */
+    .available-title {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .available-on-item {
+        min-height: 150px;
+        padding-bottom: 25px;
+        border-left: none;
+        border-bottom: 1px solid #0f1217;
+    }
+
+    .available-on-item i {
+        padding-top: 50px;
+    }
+
+    .available-on-inner {
+        bottom: 60px;
+    }
+}
+
+/* medium devices, desktop */
+@media only screen and (min-width: 992px) {
+
+    /* ######### ABOUT US  ######### */
+    .choose-us-title {
+        padding-bottom: 20px;
+    }
+
+    .about-iphone img {
+        margin-top: 35px;
+    }
+
+    .choose-us-item h3 {
+        font-size: 15px;
+    }
+
+    /* ######### FEATURES  ######### */
+    .features-inner-wrapper {
+        padding-bottom: 35px;
+    }
+
+    /* ######### AVAILALBLE ON  ######### */
+    .available-on-item {
+        min-height: 280px;
+    }
+
+    .available-on-item i {
+        padding-top: 125px;
+    }
+
+    .available-on-inner {
+        bottom: 110px;
+    }
+}
+
+/* large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+
+    /* ######### FEATURES  ######### */
+    .features-inner-wrapper {
+        padding-bottom: 70px;
+    }
+}
