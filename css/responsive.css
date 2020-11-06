@@ -177,6 +177,11 @@
 /* large devices and wide screens */
 @media only screen and (min-width: 1200px) {
 
+    /* ######### ABOUT US  ######### */
+    .choose-us-item h3 {
+        font-size: 20px;
+    }
+
     /* ######### FEATURES  ######### */
     .features-inner-wrapper {
         padding-bottom: 70px;
