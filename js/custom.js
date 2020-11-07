@@ -1,9 +1,14 @@
 // Show loading spinner instead of content while the page is loading
 $(window).on("load", function () {
-    // fade out spinner
-    $(".spinner-wrapper").fadeOut("slow");
     // Show scroll bar
     $("body").css("overflow-y", "scroll");
+
+    // hide spinner animation as the window resizes
+    // (while the resize is happening the user might see the spinner move to another position)
+    $(".spinner").css("display", "none");
+
+    // fade out spinner
+    $(".spinner-wrapper").fadeOut("slow")
 });
 
 // Add smooth scrolling in addition to the css property
