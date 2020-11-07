@@ -8,7 +8,7 @@ $(window).on("load", function () {
     $(".spinner").css("display", "none");
 
     // fade out spinner
-    $(".spinner-wrapper").fadeOut("slow")
+    $(".spinner-wrapper").fadeOut("slow");
 });
 
 // Add smooth scrolling in addition to the css property
@@ -84,17 +84,17 @@ $(document).ready(function () {
         $('section').each(function () {
             'use strict';
 
-            let sectionId = $(this).attr('id');
-            let outerHeight = $(this).outerHeight();
-            let greaterTop = $(this).offset().top - 70;
+            const SECTION_ID = $(this).attr('id');
+            const OUTER_HEIGHT = $(this).outerHeight();
+            const GREATER_TOP = $(this).offset().top - 70;
 
             // when the user scrolls 70 pixels before the section
             // find out the relevant section - add active css class to it, remove it from the rest of the sections
-            if (($(window).scrollTop() > greaterTop) &&
-                ($(window).scrollTop() < (greaterTop + outerHeight))) {
-                $('.navbar-nav li a[href=\'#' + sectionId + '\']').parent().addClass('active');
+            if (($(window).scrollTop() > GREATER_TOP) &&
+                ($(window).scrollTop() < (GREATER_TOP + OUTER_HEIGHT))) {
+                $('.navbar-nav li a[href=\'#' + SECTION_ID + '\']').parent().addClass('active');
             } else {
-                $('.navbar-nav li a[href=\'#' + sectionId + '\']').parent().removeClass('active');
+                $('.navbar-nav li a[href=\'#' + SECTION_ID + '\']').parent().removeClass('active');
             }
         });
     });
@@ -114,13 +114,13 @@ $(document).ready(function () {
     setInterval(function () {
         'use strict';
 
-        let windowHeight = $(window).height();
-        let containerHeight = $('.header-container').height();
-        let padTop = windowHeight - containerHeight;
+        const WINDOW_HEIGHT = $(window).height();
+        const CONTAINER_HEIGHT = $('.header-container').height();
+        const PADDING_TOP = WINDOW_HEIGHT - CONTAINER_HEIGHT;
 
         $('.header-container').css({
-            'padding-top': Math.round(padTop / 2) + 'px',
-            'padding-bottom': Math.round(padTop / 2) + 'px'
+            'padding-top': Math.round(PADDING_TOP / 2) + 'px',
+            'padding-bottom': Math.round(PADDING_TOP / 2) + 'px'
         });
 
     }, 10);
@@ -130,22 +130,37 @@ $(document).ready(function () {
 $(document).ready(function () {
     'use strict';
 
+    const VIEWPORT_WIDTH = $(window).width();
+    let maxSlides;
+
+    // adjust the number of visible slides according to screen size
+    if (VIEWPORT_WIDTH < 667) {
+        maxSlides = 1;
+    } else if ((VIEWPORT_WIDTH >= 667) && (VIEWPORT_WIDTH <= 992)) {
+        maxSlides = 2;
+    } else {
+        maxSlides = 3;
+    }
+
     $('.bxslider').bxSlider({
         slideWidth: 292.5,
         auto: true,
         minSlides: 1,
-        maxSlides: 3,
-        slideMargin: 50
+        maxSlides: maxSlides,
+        moveSlides: 1,
+        responsive: true,
+        infiniteLoop: true,
+        touchEnabled: true
     });
 });
 
 // add counter up animation
 $(document).ready(function () {
 
-    let viewportWidth = $(window).width();
+    const VIEWPORT_WIDTH = $(window).width();
 
     // add counter animation only excluding small devices
-    if (viewportWidth > 767) {
+    if (VIEWPORT_WIDTH > 767) {
         $('.counter-num').counterUp({
             delay: 10,
             time: 1500

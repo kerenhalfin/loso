@@ -37,7 +37,6 @@ p {
     top: 50%;
     left: 50%;
     margin: -20px 0 0 -20px;
-
     -webkit-animation: sk-rotate 2.0s infinite linear;
     animation: sk-rotate 2.0s infinite linear;
 }
