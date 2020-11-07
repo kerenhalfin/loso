@@ -4,7 +4,7 @@ Modern and responsive business sample website
 The code uses:
 * HTML5
 * CSS3
-* JavaScript ECMAS6
+* JavaScript ES6
 * jQuery 3.5.1
 * Bootstrap 3.3.7
 
