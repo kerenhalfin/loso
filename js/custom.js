@@ -1,6 +1,28 @@
+// Show loading spinner instead of content while the page is loading
 $(window).on("load", function () {
-    $("body").css("overflow-y", "scroll");
+    // fade out spinner
     $(".spinner-wrapper").fadeOut("slow");
+    // Show scroll bar
+    $("body").css("overflow-y", "scroll");
+});
+
+// Add smooth scrolling in addition to the css property
+// in case the browser doesn't support that
+$(document).ready(function () {
+    'use strict';
+
+    $('.nav-item, #scroll-to-top').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
 });
 
 // Show and hide menu
@@ -70,6 +92,13 @@ $(document).ready(function () {
                 $('.navbar-nav li a[href=\'#' + sectionId + '\']').parent().removeClass('active');
             }
         });
+    });
+});
+
+// for devices - collapse the menu after click on the items
+$(document).ready(function () {
+    $('.navbar-nav>li>a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
     });
 });
 
