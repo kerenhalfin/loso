@@ -154,6 +154,31 @@ $(document).ready(function () {
     });
 });
 
+// add swipe responsiveness to the carousel
+$(document).ready(function () {
+
+    // Carousel
+    $(".carousel").carousel({
+        interval: false,
+        pause: true
+    });
+
+    $(".carousel .carousel-inner").swipe({
+        swipeLeft: function (event, direction, distance, duration, fingerCount) {
+            this.parent().carousel('next');
+        },
+        swipeRight: function () {
+            this.parent().carousel('prev');
+        },
+        threshold: 0,
+        excludedElements: "label, button, input, select, textarea, .noSwipe"
+    });
+
+    $('.carousel .carousel-inner').on('dragstart', 'a', function () {
+        return false;
+    });
+});
+
 // add counter up animation
 $(document).ready(function () {
 
