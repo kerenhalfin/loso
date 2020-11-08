@@ -232,6 +232,7 @@ p {
 .btn-download:visited {
     background: rgb(44 56 69 / 80%);
     border-color: #129CF3;
+    color: #337ab7;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
